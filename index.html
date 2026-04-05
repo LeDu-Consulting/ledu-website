@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LeDu Consulting</title>
+  <meta name="description" content="LeDu Consulting — Health, Data Science, and AI consulting. Smarter Health. Sharper Insights. Powered by AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ─── Navigation ─────────────────────────────────────────── -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#home" class="nav__brand">
+        <img src="assets/logo.png" alt="LeDu Consulting" class="nav__logo" />
+      </a>
+      <a href="#contact" class="btn btn--outline">Get in Touch</a>
+    </div>
+  </nav>
+
+  <!-- ─── Hero ──────────────────────────────────────────────── -->
+  <section class="hero" id="home">
+    <div class="hero__inner">
+      <div class="hero__text">
+        <p class="eyebrow">Health &nbsp;·&nbsp; Data Science &nbsp;·&nbsp; AI</p>
+        <h1 class="hero__headline">
+          Smarter Health.<br />
+          Sharper Insights.<br />
+          Powered by <span class="accent">AI.</span>
+        </h1>
+        <a href="#contact" class="btn btn--primary">Get in Touch</a>
+      </div>
+
+      <!-- Decorative grid — echoes the logo squares -->
+      <div class="hero__deco" aria-hidden="true">
+        <div class="deco__grid">
+          <span class="deco__sq deco__sq--blue"></span>
+          <span class="deco__sq deco__sq--amber"></span>
+          <span class="deco__sq deco__sq--amber"></span>
+          <span class="deco__sq deco__sq--blue"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Contact ───────────────────────────────────────────── -->
+  <section class="contact" id="contact">
+    <div class="contact__inner">
+      <div class="contact__header">
+        <h2 class="section-title">Let's Talk</h2>
+        <p class="section-sub">
+          Ready to transform your health data strategy?<br />
+          We'd love to hear from you.
+        </p>
+      </div>
+
+      <!--
+        Formspree setup:
+        1. Go to https://formspree.io and create a free account
+        2. Create a new form and copy your Form ID
+        3. Replace YOUR_FORM_ID below with it (e.g. xpwzabcd)
+      -->
+      <form
+        class="contact__form"
+        action="https://formspree.io/f/YOUR_FORM_ID"
+        method="POST"
+      >
+        <div class="form__row">
+          <div class="form__field">
+            <label for="name" class="form__label">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="form__input"
+              placeholder="Your name"
+              required
+            />
+          </div>
+          <div class="form__field">
+            <label for="email" class="form__label">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form__input"
+              placeholder="your@email.com"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form__field">
+          <label for="message" class="form__label">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            class="form__textarea"
+            placeholder="Tell us about your project or challenge…"
+            required
+          ></textarea>
+        </div>
+
+        <input type="hidden" name="_replyto" value="info@ledu.consulting" />
+
+        <button type="submit" class="btn btn--primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ─── Footer ────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__copy">&copy; 2026 LeDu Consulting. All rights reserved.</p>
+      <a href="mailto:info@ledu.consulting" class="footer__email">info@ledu.consulting</a>
+    </div>
+  </footer>
+
+  <script>
+    // Shrink nav on scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 40);
+    });
+  </script>
+
+</body>
+</html>
